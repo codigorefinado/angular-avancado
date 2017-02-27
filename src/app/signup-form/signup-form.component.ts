@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupFormComponent implements OnInit {
 
-  constructor() { }
-
+  user: FormGroup;
+  constructor() {}
   ngOnInit() {
+    this.user = new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      account: new FormGroup({
+        email: new FormControl('', Validators.required),
+        confirm: new FormControl('', Validators.required)
+      })
+    });
+  }
+  onSubmit({ value, valid }: { value: User, valid: boolean }) {
+    console.log(value, valid);
   }
 
 }
