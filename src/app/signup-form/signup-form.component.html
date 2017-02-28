@@ -1,3 +1,63 @@
-<p>
-  signup-form works!
-</p>
+<form novalidate (ngSubmit)="onSubmitSimply(user)" [formGroup]="user">
+    <label>
+        <span>Nome completo</span>
+        <input type="text" placeholder="Seu nome completo" formControlName="name">
+    </label>
+
+    <div class="error" *ngIf="user.get('name').touched && user.get('name').hasError('required')">
+        Name é obrigatório!
+    </div>
+
+    <div class="error" *ngIf="user.get('name').touched && user.get('name').hasError('minlength')">
+        Minimum de 2 letras
+    </div>
+
+
+    <div formGroupName="account">
+        <label>
+            <span>Endereço de E-mail</span>
+            <input type="email" placeholder="Seu endereço e-mail" formControlName="email">
+        </label>
+
+        <div class="error"
+             *ngIf="user.get('account').get('email').hasError('required') && user.get('account').get('email').touched">
+            E-mail é obrigatório
+        </div>
+
+        <label>
+            <span>Confirmação de  email</span>
+            <input type="email" placeholder="Confirm your email address" formControlName="confirm">
+        </label>
+
+        <div class="error"
+             *ngIf="user.get('account').get('confirm').hasError('required') && user.get('account').get('confirm').touched">
+            Confirmação de e-mail é obrigatória
+        </div>
+
+        <div class="error"
+             *ngIf="user.get('account').get('confirm').hasError('sameValue') && user.get('account').get('confirm').touched">
+           Email e confirmação de e-mail precisam ser iguais
+        </div>
+
+
+    </div>
+    <button type="submit" [disabled]="user.invalid">Assinar</button>
+</form>
+
+<!--
+
+// template
+formGroup -> user
+    formControlName -> name
+    formGroup -> account
+        formControlName -> email
+        formControlName -> confirm
+
+
+//TypeScript
+FormGroup -> user
+    FormControl -> name
+    FormGroup -> account
+        FormControl -> email
+        FormControl -> confirm
+-->
