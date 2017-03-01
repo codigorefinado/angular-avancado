@@ -11,7 +11,12 @@ import { RouterModule } from '@angular/router';
       {
         path: 'content-child-children',
         loadChildren: 'app/componentes-conversam/content-child-children/content-child-children.module#ContentChildChildrenModule'
+      },
+      {
+        path: 'ng-content-example',
+        loadChildren: 'app/componentes-conversam/ng-content-example/ng-content-example.module#NgContentExampleModule'
       }
+
 
     ])
   ],

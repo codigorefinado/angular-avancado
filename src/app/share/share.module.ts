@@ -13,7 +13,8 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     HttpModule
   ],
-  exports: [ CommonModule,
+  exports: [
+    CommonModule,
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
