@@ -1,7 +1,7 @@
 import { Input, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hello',
+  selector: 'hello-world',
   template: `<p [ngStyle]="{ 'color': color }">Hello, {{name}}!</p>`,
 })
 export class HelloComponent {

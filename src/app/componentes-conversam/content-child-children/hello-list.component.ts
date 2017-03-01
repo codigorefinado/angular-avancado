@@ -2,7 +2,7 @@ import { Component, ContentChild, ContentChildren, QueryList } from '@angular/co
 import { HelloComponent } from './hello.component';
 
 @Component({
-  selector: 'app-hello-list',
+  selector: 'hello-list',
   template: `
 	  <p>Projected content:</p>
     <div>
