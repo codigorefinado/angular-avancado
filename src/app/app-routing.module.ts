@@ -7,7 +7,12 @@ import { RouterModule } from '@angular/router';
       {
         path: '',
         loadChildren: 'app/signup-form/signup-form.module#SignupFormModule'
+      },
+      {
+        path: 'content-child-children',
+        loadChildren: 'app/componentes-conversam/content-child-children/content-child-children.module#ContentChildChildrenModule'
       }
+
     ])
   ],
   exports: [ RouterModule ]
