@@ -12,13 +12,16 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
 ```html
     <meu-componente-pesquisa>
         <meu-botao-pesquisa></meu-botao-pesquisa>
-    <meu-componente-pesquisa>
+    </meu-componente-pesquisa>
 ```
 
 # Como é o template do componente meu-componente-pesquisa?
 ```html
     <input type="text">
-        <ng-content></ng-content>
-    </input>
+    <b><ng-content></ng-content></b>
+
 ```
 
+<tagA>
+    <tagB></tagB>
+</tagA>
