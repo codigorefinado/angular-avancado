@@ -9,14 +9,17 @@ import { RouterModule } from '@angular/router';
         loadChildren: 'app/signup-form/signup-form.module#SignupFormModule'
       },
       {
-        path: 'content-child-children',
-        loadChildren: 'app/componentes-conversam/content-child-children/content-child-children.module#ContentChildChildrenModule'
+        path: 'simple-ng-content-example',
+        loadChildren: 'app/componentes-conversam/simple-ng-content-example/simple-ng-content-example.module#SimpleNgContentExampleModule'
       },
       {
         path: 'ng-content-example',
         loadChildren: 'app/componentes-conversam/ng-content-example/ng-content-example.module#NgContentExampleModule'
+      },
+      {
+        path: 'content-child-children',
+        loadChildren: 'app/componentes-conversam/content-child-children/content-child-children.module#ContentChildChildrenModule'
       }
-
 
     ])
   ],
