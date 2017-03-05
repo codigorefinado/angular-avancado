@@ -9,10 +9,10 @@ import { HelloComponent } from './hello.component';
 	    <ng-content></ng-content>
 	  </div>
 	  <button (click)="onClickAll()">
-	    Randomize Hello colors
+	    Cores aleatórias Hell
 	   </button>
 	  <button (click)="onClickLast()">
-	    Randomize only last Hello color
+	    Cor aleatória no ultimo hello
 	 </button>`
 })
 export class HelloListComponent {

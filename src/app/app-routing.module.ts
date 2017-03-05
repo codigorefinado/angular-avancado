@@ -10,15 +10,20 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'simple-ng-content-example',
-        loadChildren: 'app/componentes-conversam/simple-ng-content-example/simple-ng-content-example.module#SimpleNgContentExampleModule'
+        loadChildren: 'app/componentes-conversam/ng-content/simple-ng-content-example/simple-ng-content-example.module#SimpleNgContentExampleModule'
       },
+
       {
         path: 'ng-content-example',
-        loadChildren: 'app/componentes-conversam/ng-content-example/ng-content-example.module#NgContentExampleModule'
+        loadChildren: 'app/componentes-conversam/ng-content/ng-content-example/ng-content-example.module#NgContentExampleModule'
+      },
+      {
+        path: 'simple-view-child',
+        loadChildren: 'app/componentes-conversam/view-child/simple-view-child/simple-view-child.module#SimpleViewChildModule'
       },
       {
         path: 'content-child-children',
-        loadChildren: 'app/componentes-conversam/content-child-children/content-child-children.module#ContentChildChildrenModule'
+        loadChildren: 'app/componentes-conversam/content-child/content-child-children/content-child-children.module#ContentChildChildrenModule'
       }
 
     ])
