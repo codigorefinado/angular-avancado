@@ -22,6 +22,10 @@ import { RouterModule } from '@angular/router';
         loadChildren: 'app/componentes-conversam/view-child/simple-view-child/simple-view-child.module#SimpleViewChildModule'
       },
       {
+        path: 'view-child-view-children',
+        loadChildren: 'app/componentes-conversam/view-child/view-child-view-children/view-child-view-children.module#ViewChildViewChildrenModule'
+      },
+      {
         path: 'content-child-children',
         loadChildren: 'app/componentes-conversam/content-child/content-child-children/content-child-children.module#ContentChildChildrenModule'
       }
