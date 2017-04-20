@@ -16,10 +16,11 @@ import { AlertComponent } from './alert.component';
       Step 3: Inscreva-se no <a href="https://www.youtube.com/channel/UCWHLFYc-15QhCyj5-FV5oPw">canal código refinado no youtube</a>
     </app-alert>
     
-	  <button (click)="showAlert(1)">Show steps</button>`
+	  <button (click)="showAlert(1)">Mostrar os passos</button>`
 })
 export class ViewChildViewChildrenComponent implements AfterViewInit, AfterViewChecked {
-  @ViewChild('first') alert: AlertComponent;
+  @ViewChild('first') alert: AlertComponent; //@ViewChild and template #refs
+
   @ViewChildren(AlertComponent) alerts: QueryList<AlertComponent>;
 
   alertsArr = [];

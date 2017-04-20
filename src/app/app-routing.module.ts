@@ -28,6 +28,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'content-child-children',
         loadChildren: 'app/componentes-conversam/content-child/content-child-children/content-child-children.module#ContentChildChildrenModule'
+      },
+      {
+        path: 'compartilhando-estado-com-services',
+        loadChildren: 'app/compartilhando-estado-com-services/raiz.module#RaizModule'
       }
 
     ])
